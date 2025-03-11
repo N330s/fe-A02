@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ลงทะเบียนจองทัวร์</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="checkbox"] {
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #0056b3;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #003366;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 10px;
+      font-size: small;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>ลงทะเบียนจองทัวร์ท่องเที่ยว</h2>
+    <form id="bookingForm">
+      <label for="tourType">ประเภทกลุ่มทัวร์:</label>
+      <select id="tourType" name="tourType">
+        <option value="small">กลุ่มเล็ก (10 – 15 คน)</option>
+        <option value="standard">กลุ่มมาตรฐาน (35-40 คน)</option>
+      </select>
+
+      <label for="joinLand">
+        <input type="checkbox" id="joinLand" name="joinLand"> ต้องการซื้อบัตรโดยสารเครื่องบินเอง (Join Land)
+      </label>
+
+      <label for="travelers">จำนวนผู้ร่วมเดินทาง:</label>
+      <input type="number" id="travelers" name="travelers" min="1" max="15">
+
+      <label for="contactName">ชื่อผู้ติดต่อ:</label>
+      <input type="text" id="contactName" name="contactName" required>
+
+      <label for="contactPhone">เบอร์ผู้ติดต่อ:</label>
+      <input type="text" id="contactPhone" name="contactPhone" required>
+
+      <button type="submit">ลงทะเบียน</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    รหัสนิสิต: 6733244121 ชื่อ: นายวิริทธิ์พล พูนนาค
+  </div>
+
+  <script src="booking.js"></script>
+</body>
+
+</html>
